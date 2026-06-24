@@ -53,7 +53,8 @@ logic.py                 42      4    90%
 TOTAL                   104     12    88%
 ```
 
-*(Скриншот сделан при запуске `pytest tests/ -v` на локальной машине)*
+<img width="1391" height="1396" alt="image" src="https://github.com/user-attachments/assets/0e15909a-e4a9-425e-8b2c-faaf2156e1bc" />
+
 
 ---
 
