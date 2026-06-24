@@ -7,7 +7,7 @@ import os
 import sys
 import tempfile
 
-# Чтобы импорты работали из папки tests/
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import data_service as ds
 
@@ -20,7 +20,6 @@ def tmp_data_file(tmp_path, monkeypatch):
     yield
 
 
-# ─── add_task ───────────────────────────────────────────────────────────────
 
 class TestAddTask:
     def test_add_basic(self):
@@ -64,7 +63,7 @@ class TestAddTask:
         assert int(t2["id"]) == int(t1["id"]) + 1
 
 
-# ─── get_all_tasks ───────────────────────────────────────────────────────────
+
 
 class TestGetAllTasks:
     def test_empty_db_returns_empty_list(self):
@@ -77,7 +76,6 @@ class TestGetAllTasks:
         assert len(ds.get_all_tasks()) == 3
 
 
-# ─── get_task_by_id ──────────────────────────────────────────────────────────
 
 class TestGetTaskById:
     def test_existing_task(self):
@@ -90,7 +88,6 @@ class TestGetTaskById:
         assert ds.get_task_by_id(999) is None
 
 
-# ─── delete_task ─────────────────────────────────────────────────────────────
 
 class TestDeleteTask:
     def test_delete_existing(self):
@@ -110,7 +107,6 @@ class TestDeleteTask:
         assert tasks[0]["title"] == "Вторая"
 
 
-# ─── update_task ─────────────────────────────────────────────────────────────
 
 class TestUpdateTask:
     def test_update_title(self):
@@ -147,7 +143,6 @@ class TestUpdateTask:
             ds.update_task(1, deadline="2026/01/01")
 
 
-# ─── mark_done ───────────────────────────────────────────────────────────────
 
 class TestMarkDone:
     def test_mark_existing(self):
@@ -165,7 +160,6 @@ class TestMarkDone:
         assert task["done"] == "True"
 
 
-# ─── clear_all ───────────────────────────────────────────────────────────────
 
 class TestClearAll:
     def test_clears_everything(self):
