@@ -27,31 +27,7 @@
 
 ## 2. Скриншот прогона тестов
 
-```
-$ pytest tests/ -v --cov=. --cov-report=term-missing
 
-tests/test_data_service.py::TestAddTask::test_add_basic PASSED
-tests/test_data_service.py::TestAddTask::test_add_with_priority_high PASSED
-tests/test_data_service.py::TestAddTask::test_add_with_deadline PASSED
-tests/test_data_service.py::TestAddTask::test_add_empty_title_raises PASSED
-tests/test_data_service.py::TestAddTask::test_add_whitespace_title_raises PASSED
-tests/test_data_service.py::TestAddTask::test_add_invalid_priority_raises PASSED
-tests/test_data_service.py::TestAddTask::test_add_invalid_deadline_raises PASSED
-tests/test_data_service.py::TestAddTask::test_add_strips_title PASSED
-tests/test_data_service.py::TestAddTask::test_add_multiple_increments_id PASSED
-...
-tests/test_bugfixes.py::test_bug01_search_case_insensitive PASSED
-tests/test_bugfixes.py::test_bug02_update_empty_title_raises PASSED
-
-====== 38 passed in 0.45s ======
-
-Name                  Stmts   Miss  Cover
------------------------------------------
-data_service.py          62      8    87%
-logic.py                 42      4    90%
------------------------------------------
-TOTAL                   104     12    88%
-```
 
 <img width="1391" height="1396" alt="image" src="https://github.com/user-attachments/assets/0e15909a-e4a9-425e-8b2c-faaf2156e1bc" />
 
